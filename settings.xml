@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<settings>
+  <profiles>
+    <profile>
+      <id>local</id>
+      <repositories>
+        <repository>
+          <id>nlpcn-repo</id>
+          <url>http://maven.nlpcn.org/</url>
+        </repository>
+        <repository>
+          <id>ali-repo</id>
+          <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>local</activeProfile>
+  </activeProfiles>
+</settings>
