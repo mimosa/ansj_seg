@@ -94,4 +94,4 @@ text.to_a(:words) # text.to_a(:words, 5)
 ]
 ```
 
-*PS.* Built and tested on jRuby 9.1.6
+*PS.* Built and tested on JRuby 9.1.6

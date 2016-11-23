@@ -23,7 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.requirements << 'jar org.nlpcn, nlp-lang, 1.7'
   spec.requirements << 'jar org.ansj, ansj_seg, 5.0.1'
-  spec.requirements << 'jar com.alibaba, fastjson, 1.2.21'
 
   spec.add_runtime_dependency 'ruby-maven', '~> 3.3', '>= 3.3.12'
   spec.add_runtime_dependency 'jar-dependencies', '~> 0.3.5'

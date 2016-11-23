@@ -36,18 +36,10 @@ module AnsjSeg
   class Config < Java::OrgAnsjUtil::MyStaticValue
   end
 
-  class JSON
+  class JSON < MultiJson
     def self.trans(obj)
       json = self.dump(obj).to_s
       self.load(json)
-    end
-
-    def self.dump(obj)
-      Java::ComAlibabaFastjson::JSON.toJSONString(obj)
-    end
-
-    def self.load(str)
-      MultiJson.load(str, use_bigdecimal: false, symbolize_keys: true)
     end
   end
 

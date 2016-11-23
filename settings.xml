@@ -2,20 +2,16 @@
 <settings>
   <profiles>
     <profile>
-      <id>local</id>
+      <id>ansj_seg</id>
       <repositories>
         <repository>
-          <id>nlpcn-repo</id>
+          <id>mvn-repo</id>
           <url>http://maven.nlpcn.org/</url>
-        </repository>
-        <repository>
-          <id>ali-repo</id>
-          <url>http://repo1.maven.org/maven2/</url>
         </repository>
       </repositories>
     </profile>
   </profiles>
   <activeProfiles>
-    <activeProfile>local</activeProfile>
+    <activeProfile>ansj_seg</activeProfile>
   </activeProfiles>
 </settings>
