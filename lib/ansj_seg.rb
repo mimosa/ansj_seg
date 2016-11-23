@@ -41,7 +41,7 @@ module AnsjSeg
     
     def self.trans(obj)
       json = self.dump(obj).to_s
-      self.load(json)
+      self.load(json, use_bigdecimal: false, symbolize_keys: true)
     end
   end
 
