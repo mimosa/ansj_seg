@@ -19,7 +19,6 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'jrjackson' # 可选项，JRuby 下最快的 json 解析器， 需要提前：gem install jrjackson -V 
 require 'ansj_seg'
 
 # 设置用户（默认）词典
@@ -40,7 +39,7 @@ text = "Ruby China，对！没错！这里就是 Ruby 社区，目前这里已�
 ```ruby
 # 分词
 # 第二个参数可选：:to, :nlp, :index 三种分词模式
-text.to_a(:terms) # text.to_a(:terms, :nlp)
+   # text.to_a(:terms, :nlp)
 ```
 > 
 ```ruby

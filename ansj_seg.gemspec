@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'ruby-maven', '~> 3.3', '>= 3.3.12'
   spec.add_runtime_dependency 'jar-dependencies', '~> 0.3.5'
+  spec.add_runtime_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
+  spec.add_runtime_dependency 'jrjackson', '~> 0.3.8'
 end
