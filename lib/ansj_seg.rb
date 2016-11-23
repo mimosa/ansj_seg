@@ -8,6 +8,31 @@ require 'ansj_seg_jars'
 require 'multi_json'
 
 module AnsjSeg
+  def self.fitler
+    @fitler ||= Filter.new
+  end
+
+  class Filter < Java::OrgAnsjRecognitionImpl::FilterRecognition
+    def ignore(opts = { natures: ['null', 'w'], words: ['是', '的'] })
+      if opts[:natures].is_a?(Array) && !opts[:natures].empty?
+        self.insertStopNatures(*opts.delete(:natures))
+      end
+
+      if opts[:words].is_a?(Array) && !opts[:words].empty?
+        self.insertStopWords(opts.delete(:words))
+      end
+
+      if opts[:regex].is_a?(Array) && !opts[:regex].empty?
+        opts.delete(:regex).map { |r|  self.insertStopRegex(r) }
+      end
+    end
+
+    def ignore!(opts = {})
+      self.ignore(opts)
+      self
+    end
+  end
+
   class Config < Java::OrgAnsjUtil::MyStaticValue
   end
 
@@ -55,7 +80,7 @@ module AnsjSeg
           BaseAnalysis
         end
 
-        JSON.trans klass.parse(self).getTerms
+        JSON.trans klass.parse(self).recognition(AnsjSeg.fitler.ignore!).getTerms
       end
 
       def split_words(limit = 0)
@@ -70,4 +95,5 @@ module AnsjSeg
   end
 
 end # AnsjSeg
+
 String.send(:include, AnsjSeg::String)
