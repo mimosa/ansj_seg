@@ -36,7 +36,9 @@ module AnsjSeg
   class Config < Java::OrgAnsjUtil::MyStaticValue
   end
 
-  class JSON < MultiJson
+  module JSON
+    extend MultiJson
+    
     def self.trans(obj)
       json = self.dump(obj).to_s
       self.load(json)
