@@ -1,6 +1,15 @@
-# AnsjSeg for jRuby
+# Ansj中文分词 for JRuby
 
-Read AnsjSeg docs for more details: https://github.com/NLPchina/ansj_seg
+## 引用原项目摘要
+> 这是一个基于 n-Gram + CRF + HMM 的中文分词的 Java 实现。
+
+> 分词速度达到每秒钟大约 200万字左右（原作者 MacbookAir 下测试），准确率能达到 96% 以上
+
+> 目前实现了 中文分词、中文姓名识别、用户自定义词典、关键字提取、自动摘要、关键字标记等功能。
+
+> 可以应用到自然语言处理等方面，适用于对分词效果要求高的各种项目。
+
+Read Ansj中文分词 docs for more details: http://nlpchina.github.io/ansj_seg
 
 ## Installing
 
@@ -19,7 +28,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'jrjackson' # 可选项，JRuby 下最快的 json 解析器， 需要提前：gem install jrjackson -V 
+require 'jrjackson' # 可选项， JRuby 下最快的 json 解析器， 需要提前：gem install jrjackson -V 
 require 'ansj_seg'
 
 # 设置用户（默认）词典
