@@ -19,6 +19,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'jrjackson' # 可选项，JRuby 下最快的 json 解析器， 需要提前：gem install jrjackson -V 
 require 'ansj_seg'
 
 # 设置用户（默认）词典

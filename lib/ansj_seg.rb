@@ -47,7 +47,7 @@ module AnsjSeg
     end
 
     def self.load(str)
-      MultiJson.load(str, symbolize_keys: true)
+      MultiJson.load(str, use_bigdecimal: false, symbolize_keys: true)
     end
   end
 
